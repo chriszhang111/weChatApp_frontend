@@ -1,0 +1,59 @@
+<!--pages/reply/reply.wxml-->
+<view>
+  <view><label></label></view>
+  <view class="main-comment" bindtap='replyFocus'
+  data-fatherCommentId='{{main.id}}'  
+  data-toUserId='{{main.fromUserId}}' 
+  data-toNickname='{{main.nickname}}'  
+  >
+    <view class="container-comments">
+    <block wx:if="{{main.faceImage == null}}">
+      <image class='face-comments' src='../resource/images/noneface.png' ></image>
+      </block>
+      <block wx:else>
+        <image class='face-comments' src='{{serverUrl}}{{main.faceImage}}' ></image>
+      </block>
+       <label class='nickname-lbl'>@{{main.nickname}} 留言</label>
+      <label class='date-lbl'>{{main.timeAgoStr}}</label>
+    </view>
+    <view class='comments-content-main'>{{main.comment}}</view>
+  </view>
+  <view class="split"></view>
+
+  <block wx:for="{{childrenList}}">
+  <view class='comments-all' bindtap='replyFocus' 
+  data-fatherCommentId='{{item.id}}'  
+  data-toUserId='{{item.fromUserId}}' 
+  data-toNickname='{{item.nickname}}' 
+  >
+      <view class='container-comments'>
+      <block wx:if="{{item.faceImage != null}}">
+          <image class='face-comments' src='{{serverUrl}}{{item.faceImage}}' ></image>
+      </block>
+        <block wx:else>
+            <image class='face-comments' src='../resource/images/noneface.png' ></image>
+        </block>
+            <label style="margin-left:-70px">@{{item.nickname}}</label>
+              <label class='date-lbl' style="margin-left:-70px">{{item.timeAgoStr}}</label>
+            
+              <block wx:if="{{item.toNickname != null}}">
+                <label class='nickname-lbl-s' style="margin-left:-70px">回复@{{item.toNickname}}</label>
+              </block>
+              <block wx:else>
+                 <label class='nickname-lbl-s' style="margin-left:-70px">留言：
+                 </label>
+              </block>
+      </view>
+      <view class='comments-content'>{{item.comment}}</view>
+  </view>
+</block> 
+<view class="split"></view>
+
+  <view class="saySthView">
+<input name="commentContent" class="saySth" placeholder="{{placeholder}}" confirm-type="send" bindconfirm="saveComment" focus='{{commentFocus}}' value='{{contentValue}}'
+data-replyFatherCommentId='{{replyFatherCommentId}}'
+data-replyToUserId='{{replyToUserId}}'
+/>
+</view>
+
+</view>

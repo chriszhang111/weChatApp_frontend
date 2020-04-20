@@ -1,0 +1,31 @@
+<form bindsubmit="submitDesc">
+<video 
+name="videoTest"
+id="video"
+src="http://192.168.0.102:8081/190731A9YA1NM32W/video/eba92463-47f6-4971-85ef-a14fa50e87f6.mp4"
+muted="{{true}}"
+initial-time="0"
+duration="8"
+controls="{{true}}"
+danmu-list="{{danmuList}}"
+enable-danmu="{{true}}"
+danmu-btn="{{true}}"
+autoplay="{{false}}"
+loop="{{false}}"
+page-gesture="{{true}}"
+direction="-90"
+show-progress="{{true}}"
+show-fullscreen-btn="{{true}}"
+show-play-btn="{{true}}"
+show-center-play-btn="{{true}}"
+enable-progress-gesture="{{true}}"
+poster="http://192.168.0.102:8081/190731A9YA1NM32W/face/wx406bd9a1a68b1af4.o6zAJswUXkju5_d4bG52cvi3h_mE.rDyhmIxWPT94e385189a8a094e2bb2dfc951f34b9814.jpg"
+bindplay="bindplay"
+bindpause="bindpause"
+></video>
+<view class="inputView">
+            <label class="loginLabel">视频描述：</label>
+            <input name="desc" class="inputText" placeholder="说点什么吧" />
+            <button class="submitBtn" type="primary" form-type='submit'>上传视频</button>
+        </view>
+</form>

@@ -1,0 +1,94 @@
+/* pages/reply/reply.wxss */
+page {
+    background-color: #0e0f1a;
+    /* background-color: red; */
+}
+
+.main-comment {
+   margin-bottom: 10px;  
+      /* border-bottom: solid 1px gray;   */
+    background-color: #242c16;
+    color: #e8e8e8;
+}
+.split{
+  width: 100%;
+  height: 10px;
+}
+
+.face-comments {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.container-comments{
+    display: flex;
+    
+    margin-top: 20rpx;
+    margin-left: 50rpx;
+    margin-right: 50rpx;
+    justify-content: space-between;
+    
+}
+
+
+.nickname-comments {
+    margin-left: 10px;
+}
+
+.nickname-lbl{
+    color: #a1a1a1;
+    font-size: 18px;
+    margin-left: -150px;
+}
+
+.date-lbl{
+    color: #a1a1a1;
+}
+
+.comments-content{
+  margin-left: 5px;
+    margin-right: 5px;
+    /* margin-bottom: 10px; */
+    border-bottom: solid 1px #232323;
+    background-color: #141414;
+}
+.comments-content-main{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: solid 3px #232323;
+    background-color: #242c16;
+    font-weight: bold;
+}
+
+.saySthView {
+    padding: 10px;
+    background-color: #141414;
+    line-height: 45px;
+    border-bottom: solid 1px #232323;
+    color: white;
+}
+
+.saySth {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.comments-all {
+    /* margin-top: 10px; */
+      margin-bottom: 10px;  
+      /* border-bottom: solid 1px gray;   */
+    background-color: #141414;
+    color: #e8e8e8;
+}
+
+.nickname-lbl-s{
+  color: #a1a1a1;
+  font-size: 15px;
+  margin-left:-150px
+  
+}
